@@ -1,0 +1,49 @@
+
+<div class="container col-md-6">
+
+    <h2 class="text-center pt-5">Synthetic Indices Position Size Calculator</h2>
+
+    <form class="row g-3 pt-5" [formGroup]="profileForm">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Account Balance</label>
+        <input type="number" class="form-control" id="n1" formControlName="n1" placeholder="E.g. 300" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Percentage Risk (%)</label>
+        <input type="number" class="form-control" min="0" max="100" id="n2" formControlName="n2" placeholder="0-100" required>
+      </div>
+      <!-- <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Entry Price</label>
+        <input type="number" class="form-control" step="0.000001" id="n3" name="n3" class="form-control" placeholder="E.g. 47.4333" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Exit Price(SL)</label>
+        <input type="number" class="form-control" step="0.000001" id="n4" name="n4" class="form-control" placeholder="E.g. 788.2647" required>
+      </div> -->
+
+      <div class="col-md-6">
+        <label for="inputAddress" class="form-label">Stop Loss (in Pips)</label>
+        <input type="number" class="form-control" id="n3" formControlName="n3" placeholder="E.g. 47" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputAddress" class="form-label">Stop Loss (in Pips)</label>
+        <select class="custom-select mb-3" (change)="changeCity($event)" formControlName="cityName">
+            <option value="">Choose indices</option>
+            <option *ngFor="let city of City" [ngValue]="city">
+              {{ city }}
+            </option>
+          </select>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary" (click)="calculate()">Calculate</button>
+      </div>
+
+      <div *ngIf="!isLoader" class="tempcard">
+          <h6>Total risk: {{totalRisk}}</h6>
+          <h6>Lot size: {{lotSize}}</h6>
+      </div>
+
+    </form>
+
+</div>

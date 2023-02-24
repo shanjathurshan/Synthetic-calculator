@@ -1,0 +1,40 @@
+.tempcard{
+    background: linear-gradient(45deg, #ff3232, #ff5656);
+    color: white;
+    border-radius: 8px;
+    padding: 20px 20px 15px;
+    margin-top: 1rem;
+    margin-left: 14px;
+    margin-right: 14px;
+    width: 100%;
+}
+*:focus {outline:none !important}
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+select:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+button:focus {
+    outline:none;
+    box-shadow: none;
+  }
+  button:active {
+    outline:none;
+    box-shadow: none;
+  }
+  button.btn.btn-primary {
+    width: 100%;
+}
+label.form-label {
+    font-weight: 300;
+}
+.col-md-6 {
+    padding-bottom: 15px;
+}
