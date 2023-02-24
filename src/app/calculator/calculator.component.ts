@@ -14,8 +14,8 @@ export class CalculatorComponent {
   isLoader: boolean = false;
 
   profileForm = new FormGroup({
-    n1: new FormControl(''),
-    n2: new FormControl(''),
+    n1: new FormControl('100'),
+    n2: new FormControl('5'),
     n3: new FormControl(''),
     cityName: new FormControl('', Validators.required),
   });
