@@ -1,5 +1,7 @@
 # SyntheticCalculator
 
+Synthetic Calculator - [https://shanjathurshan.github.io/Synthetic-calculator/](https://shanjathurshan.github.io/Synthetic-calculator/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
 
 ## Development server
